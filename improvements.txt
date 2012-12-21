@@ -15,49 +15,59 @@
 
 Original:
 
-     7.815.800.632 cycles                    #    0,000 GHz                    
-     1.232.939.922 instructions              #    0,16  insns per cycle        
-        35.980.916 cache-misses                                                
-        19.698.344 branch-misses                                               
+ Performance counter stats for './hash input input2' (20 runs):
 
-       2,283532451 seconds time elapsed
+     7.768.705.307 cycles                    #    0,000 GHz                      ( +-  0,62% )
+     1.231.882.463 instructions              #    0,16  insns per cycle          ( +-  0,02% )
+        35.987.914 cache-misses                                                  ( +-  0,09% )
+        19.669.334 branch-misses                                                 ( +-  0,12% )
+
+       2,281744139 seconds time elapsed                                          ( +-  0,57% )
 
 
 1. lineares Sondieren 
 
-     5.535.690.613 cycles                    #    0,000 GHz                    
-     1.099.905.922 instructions              #    0,20  insns per cycle        
-        41.125.948 cache-misses                                                
-        23.990.136 branch-misses                                               
+ Performance counter stats for './hash input input2' (20 runs):
 
-       1,617945286 seconds time elapsed
+     5.537.641.052 cycles                    #    0,000 GHz                      ( +-  0,08% )
+     1.099.673.074 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        41.231.448 cache-misses                                                  ( +-  0,22% )
+        23.992.808 branch-misses                                                 ( +-  0,03% )
+
+       1,614074370 seconds time elapsed                                          ( +-  0,05% )
 
 
 2. hashnode structure
 
-     5.538.992.714 cycles                    #    0,000 GHz                    
-     1.100.376.286 instructions              #    0,20  insns per cycle        
-        40.493.790 cache-misses                                                
-        23.977.154 branch-misses                                               
+ Performance counter stats for './hash input input2' (20 runs):
 
-       1,618025387 seconds time elapsed
+     5.516.164.569 cycles                    #    0,000 GHz                      ( +-  0,09% )
+     1.099.682.818 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        40.459.123 cache-misses                                                  ( +-  0,22% )
+        23.987.787 branch-misses                                                 ( +-  0,03% )
+
+       1,608535688 seconds time elapsed                                          ( +-  0,07% )
 
 
 3. If-Anweisung in lookup
 
-     5.506.592.855 cycles                    #    0,000 GHz                    
-     1.114.312.237 instructions              #    0,20  insns per cycle        
-        35.307.954 cache-misses                                                
-        24.227.130 branch-misses                                               
+ Performance counter stats for './hash input input2' (20 runs):
 
-       1,603764985 seconds time elapsed
+     5.485.706.790 cycles                    #    0,000 GHz                      ( +-  0,07% )
+     1.114.249.242 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        35.131.869 cache-misses                                                  ( +-  0,07% )
+        24.218.972 branch-misses                                                 ( +-  0,03% )
+
+       1,600369942 seconds time elapsed                                          ( +-  0,06% )
 
 
 4. Array indizes
 
-     5.400.770.756 cycles                    #    0,000 GHz                    
-     1.097.271.775 instructions              #    0,20  insns per cycle        
-        36.483.962 cache-misses                                                
-        24.020.819 branch-misses                                               
+ Performance counter stats for './hash input input2' (20 runs):
 
-       1,577238639 seconds time elapsed
+     5.451.964.797 cycles                    #    0,000 GHz                      ( +-  0,73% )
+     1.097.290.401 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        36.504.227 cache-misses                                                  ( +-  0,14% )
+        24.074.482 branch-misses                                                 ( +-  0,04% )
+
+       1,589130940 seconds time elapsed                                          ( +-  0,74% )

@@ -16,6 +16,7 @@ REF		= 8879313950759542027
 GCC		= gcc
 
 PERF		= $(shell [ -x /usr/sbin/perf ] && echo -n "/usr/sbin/perf" || which perf )
+PERF_REPEATS	= 20
 PERF_EVENTS	= cycles,instructions,cache-misses,branch-misses
 
 PROF_OUTFILE	= prof.out
@@ -33,7 +34,7 @@ test: $(BIN) $(PARAMS)
 	[ "$(REF)" = "`./$^`" ]
 
 perf: $(BIN) $(PARAMS)
-	$(PERF) stat -e $(PERF_EVENTS) ./$^ > /dev/null
+	$(PERF) stat -r $(PERF_REPEATS) -e $(PERF_EVENTS) ./$^ > /dev/null
 
 prof: $(BIN_PROF) $(PARAMS)
 	./$^ > /dev/null
