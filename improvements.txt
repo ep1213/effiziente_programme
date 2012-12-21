@@ -9,8 +9,6 @@
 
 
 Original:
-		
-Performance counter stats for './hash input input2':
 
      7.815.800.632 cycles                    #    0,000 GHz                    
      1.232.939.922 instructions              #    0,16  insns per cycle        
@@ -20,10 +18,7 @@ Performance counter stats for './hash input input2':
        2,283532451 seconds time elapsed
 
 
-
 1. lineares Sondieren 
-
-Performance counter stats for './hash input input2':
 
      5.535.690.613 cycles                    #    0,000 GHz                    
      1.099.905.922 instructions              #    0,20  insns per cycle        
@@ -34,3 +29,10 @@ Performance counter stats for './hash input input2':
 
 
 2. hashnode structure
+
+     5.538.992.714 cycles                    #    0,000 GHz                    
+     1.100.376.286 instructions              #    0,20  insns per cycle        
+        40.493.790 cache-misses                                                
+        23.977.154 branch-misses                                               
+
+       1,618025387 seconds time elapsed
