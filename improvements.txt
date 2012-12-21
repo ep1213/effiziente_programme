@@ -1,0 +1,12 @@
+1. Kollisionsauflösungsstrategie auf lineares Sondieren (linear probing) ändern
+	a. Array von Pointer auf Struct geändert	
+	b. insert Funktion geändert
+	c. lookup Funktion geändert
+
+
+	Original:
+		
+
+
+	
+
