@@ -4,11 +4,13 @@
 	c. lookup Funktion geändert
 
 
-
 2. hashnode size_t keylength an den Anfang des Structs gestetzt -> mini-improvement
 
 
 3. If-Anweisung bei lookup aus der Schleife kopiert für den Fall, dass wir gleich beim ersten lookup Glück haben
+
+
+4. In Schleifen in insert/lookup pointer statt array indizes benutzen.
 
 
 Original:
@@ -49,3 +51,13 @@ Original:
         24.227.130 branch-misses                                               
 
        1,603764985 seconds time elapsed
+
+
+4. Array indizes
+
+     5.400.770.756 cycles                    #    0,000 GHz                    
+     1.097.271.775 instructions              #    0,20  insns per cycle        
+        36.483.962 cache-misses                                                
+        24.020.819 branch-misses                                               
+
+       1,577238639 seconds time elapsed
