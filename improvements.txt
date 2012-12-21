@@ -3,6 +3,11 @@
 	b. insert Funktion geändert
 	c. lookup Funktion geändert
 
+
+
+2. hashnode size_t keylength an den Anfang des Structs gestetzt -> mini-improvement
+
+
 Original:
 		
 Performance counter stats for './hash input input2':
@@ -14,7 +19,9 @@ Performance counter stats for './hash input input2':
 
        2,283532451 seconds time elapsed
 
-1.
+
+
+1. lineares Sondieren 
 
 Performance counter stats for './hash input input2':
 
@@ -24,3 +31,6 @@ Performance counter stats for './hash input input2':
         23.990.136 branch-misses                                               
 
        1,617945286 seconds time elapsed
+
+
+2. hashnode structure
