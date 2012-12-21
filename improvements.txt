@@ -3,10 +3,24 @@
 	b. insert Funktion geändert
 	c. lookup Funktion geändert
 
-
-	Original:
+Original:
 		
+Performance counter stats for './hash input input2':
 
+     7.815.800.632 cycles                    #    0,000 GHz                    
+     1.232.939.922 instructions              #    0,16  insns per cycle        
+        35.980.916 cache-misses                                                
+        19.698.344 branch-misses                                               
 
-	
+       2,283532451 seconds time elapsed
 
+1.
+
+Performance counter stats for './hash input input2':
+
+     5.535.690.613 cycles                    #    0,000 GHz                    
+     1.099.905.922 instructions              #    0,20  insns per cycle        
+        41.125.948 cache-misses                                                
+        23.990.136 branch-misses                                               
+
+       1,617945286 seconds time elapsed
