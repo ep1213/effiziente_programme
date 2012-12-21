@@ -42,3 +42,10 @@ Original:
 
 
 3. If-Anweisung in lookup
+
+     5.506.592.855 cycles                    #    0,000 GHz                    
+     1.114.312.237 instructions              #    0,20  insns per cycle        
+        35.307.954 cache-misses                                                
+        24.227.130 branch-misses                                               
+
+       1,603764985 seconds time elapsed
