@@ -8,6 +8,9 @@
 2. hashnode size_t keylength an den Anfang des Structs gestetzt -> mini-improvement
 
 
+3. If-Anweisung bei lookup aus der Schleife kopiert für den Fall, dass wir gleich beim ersten lookup Glück haben
+
+
 Original:
 
      7.815.800.632 cycles                    #    0,000 GHz                    
@@ -36,3 +39,6 @@ Original:
         23.977.154 branch-misses                                               
 
        1,618025387 seconds time elapsed
+
+
+3. If-Anweisung in lookup
