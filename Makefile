@@ -15,7 +15,7 @@ REF		= 8879313950759542027
 
 GCC		= gcc
 
-PERF		= /usr/sbin/perf
+PERF		= $(shell [ -x /usr/sbin/perf ] && echo -n "/usr/sbin/perf" || `which perf` )
 PERF_EVENTS	= cycles,instructions,cache-misses,branch-misses
 
 PROF_OUTFILE	= prof.out
