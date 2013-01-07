@@ -1,0 +1,60 @@
+all results from g0.complang.tuwien.ac.at
+
+
+Original:
+
+7285628016  cycles
+1063359313  instructions
+  35003655  cache-misses
+  11401116  branch-misses
+  
+  
+Improvement 1 - Linear probing:
+
+5205139531  cycles
+1013709131  instructions
+  35241705  cache-misses
+  15150183  branch-misses
+  
+  
+Improvement 2 - hashnode size_t keylength an den Anfang des Structs gestetzt -> mini-improvement:
+
+5200304206  cycles
+1013706487  instructions
+  34311839  cache-misses
+  15204097  branch-misses
+  
+  
+Improvement 3 - If-Anweisung bei lookup aus der Schleife kopiert für den Fall, dass wir gleich beim ersten lookup Glück haben:
+
+5187151425  cycles
+1000032691  instructions
+  33415919  cache-misses
+  15113673  branch-misses
+  
+  
+Improvement 4 - In Schleifen in insert/lookup pointer statt array indizes benutzen.
+(no "cycle" improvement @ g0!!!, note cycles vs instructions)
+
+5263210780  cycles
+ 974961817  instructions
+  39916476  cache-misses
+  15230799  branch-misses
+  
+  
+Improvement 3_1 - Based on improvement 3, simplified index calculation:
+Better cycle + instruction use:
+
+5174243830  cycles
+ 961623241  instructions
+  35358051  cache-misses
+  15108949  branch-misses
+
+
+Improvement 3_2 - Changed lookup to use struct node instead of struct node *.
+Less cycles but more instructions:
+
+5154714961  cycles
+983886270  instructions
+ 37226644  cache-misses
+ 15074776  branch-misses 
