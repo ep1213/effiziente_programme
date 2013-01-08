@@ -122,3 +122,13 @@ and    $0xfffff,%eax
         23.891.685 branch-misses                                                 ( +-  0,05% )
 
        1,555073057 seconds time elapsed                                          ( +-  0,08% )
+
+
+6. Copy struct in lookup instead of deref
+
+     5.247.906.481 cycles                    #    0,000 GHz                      ( +-  0,08% )
+     1.129.250.185 instructions              #    0,22  insns per cycle          ( +-  0,00% )
+        34.469.068 cache-misses                                                  ( +-  0,07% )
+        24.094.662 branch-misses                                                 ( +-  0,06% )
+
+       1,531305919 seconds time elapsed                                          ( +-  0,08% )
