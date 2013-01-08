@@ -61,42 +61,6 @@ Original:
        1,555794008 seconds time elapsed                                          ( +-  0,08% )
 
 
-4_g0. Use if instead of modulo operation
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.387.723.189 cycles                    #    0,000 GHz                      ( +-  0,12% )
-     1.102.137.781 instructions              #    0,20  insns per cycle          ( +-  0,00% )
-        38.057.826 cache-misses                                                  ( +-  0,07% )
-        23.954.459 branch-misses                                                 ( +-  0,05% )
-
-       1,572152602 seconds time elapsed                                          ( +-  0,07% )
-
-
-5_g0. Copy struct instead of using pointers in lookup
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.351.975.768 cycles                    #    0,000 GHz                      ( +-  0,15% )
-     1.120.036.904 instructions              #    0,21  insns per cycle          ( +-  0,00% )
-        36.198.902 cache-misses                                                  ( +-  0,09% )
-        24.065.427 branch-misses                                                 ( +-  0,05% )
-
-       1,559299054 seconds time elapsed                                          ( +-  0,13% )
-
-
-6_g0. Improve branch prediction, optimize for hash found in first iteration
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.334.837.305 cycles                    #    0,000 GHz                      ( +-  0,08% )
-     1.120.053.068 instructions              #    0,21  insns per cycle          ( +-  0,00% )
-        36.268.089 cache-misses                                                  ( +-  0,04% )
-        24.147.772 branch-misses                                                 ( +-  0,02% )
-
-       1,557989971 seconds time elapsed                                          ( +-  0,08%
-
-
 4. Change modulo operation into bit-wise and.
 
  Performance counter stats for './hash input input2' (20 runs):
