@@ -59,14 +59,3 @@ Original:
         23.901.216 branch-misses                                                 ( +-  0,05% )
 
        1,555794008 seconds time elapsed                                          ( +-  0,08% )
-
-4. Array indizes
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.450.613.711 cycles                    #    0,000 GHz                      ( +-  0,15% )
-     1.096.505.600 instructions              #    0,20  insns per cycle          ( +-  0,01% )
-        40.145.815 cache-misses                                                  ( +-  0,21% )
-        24.030.369 branch-misses                                                 ( +-  0,04% )
-
-       1,591981443 seconds time elapsed                                          ( +-  0,10% )
