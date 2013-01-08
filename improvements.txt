@@ -1,98 +1,34 @@
 1. Kollisionsauflösungsstrategie auf lineares Sondieren (linear probing) ändern
-	a. Array von Pointer auf Struct geändert	
-	b. insert Funktion geändert
-	c. lookup Funktion geändert
+	- Cachelokalität bei Verkettung der Überläufer schlecht.
+	- Haben Cache Miss bei jedem Element der Hashtabelle (inkl.
+	  Überläufer).
+	- Alternativen: Quadratisches Sondieren, Double Hashing, haben
+	  schlechtere Lokalität
 
 
-2. hashnode size_t keylength an den Anfang des Structs gestetzt -> mini-improvement
+2. hashnode size_t keylength an den Anfang des Structs gestetzt
+	- Lookup prüft zuerst keylength, ist keylength ganz vorn, spart man
+	  eine Instruktion.
 
 
 3. If-Anweisung bei lookup aus der Schleife kopiert für den Fall, dass wir gleich beim ersten lookup Glück haben
+	- Annahme, dass wir im Normalfall keine Kollision haben.
+	- Bringt Compiler dazu für Einzelfall zu optimieren.
 
 
-4. In Schleifen in insert/lookup pointer statt array indizes benutzen.
+4. Modulo Operator durch bitweises UND ersetzen
+	- UND ist viel billiger.
+	- Aber: Compiler hat Modulo mit Konstante erkannt und selbst
+	  optimiert.
+	  and    $0xfffff,%eax
 
 
-Original:
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     7.768.705.307 cycles                    #    0,000 GHz                      ( +-  0,62% )
-     1.231.882.463 instructions              #    0,16  insns per cycle          ( +-  0,02% )
-        35.987.914 cache-misses                                                  ( +-  0,09% )
-        19.669.334 branch-misses                                                 ( +-  0,12% )
-
-       2,281744139 seconds time elapsed                                          ( +-  0,57% )
+5. Branch Prediction für den Normalfall (keine Hashkollision) optimieren.
+	- Annahme, dass ein IF als Spezialfall gehandhabt wird und eventuell
+	  mehr Sprünge braucht.
+	- Offenbar wird das auch vom Compiler erkannt.
 
 
-1. lineares Sondieren 
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.537.641.052 cycles                    #    0,000 GHz                      ( +-  0,08% )
-     1.099.673.074 instructions              #    0,20  insns per cycle          ( +-  0,00% )
-        41.231.448 cache-misses                                                  ( +-  0,22% )
-        23.992.808 branch-misses                                                 ( +-  0,03% )
-
-       1,614074370 seconds time elapsed                                          ( +-  0,05% )
-
-
-2. hashnode structure
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.516.164.569 cycles                    #    0,000 GHz                      ( +-  0,09% )
-     1.099.682.818 instructions              #    0,20  insns per cycle          ( +-  0,00% )
-        40.459.123 cache-misses                                                  ( +-  0,22% )
-        23.987.787 branch-misses                                                 ( +-  0,03% )
-
-       1,608535688 seconds time elapsed                                          ( +-  0,07% )
-
-
-3. If-Anweisung in lookup
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.326.434.201 cycles                    #    0,000 GHz                      ( +-  0,12% )
-     1.108.251.994 instructions              #    0,21  insns per cycle          ( +-  0,01% )
-        37.474.977 cache-misses                                                  ( +-  0,11% )
-        23.901.216 branch-misses                                                 ( +-  0,05% )
-
-       1,555794008 seconds time elapsed                                          ( +-  0,08% )
-
-
-4. Change modulo operation into bit-wise and.
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.326.874.164 cycles                    #    0,000 GHz                      ( +-  0,08% )
-     1.108.120.038 instructions              #    0,21  insns per cycle          ( +-  0,00% )
-        37.436.051 cache-misses                                                  ( +-  0,09% )
-        23.888.873 branch-misses                                                 ( +-  0,05% )
-
-       1,554599868 seconds time elapsed                                          ( +-  0,07% )
-
-GCC does this automatically:
-and    $0xfffff,%eax
-
-
-5. Try to improve branch prediction
-
- Performance counter stats for './hash input input2' (20 runs):
-
-     5.325.517.533 cycles                    #    0,000 GHz                      ( +-  0,10% )
-     1.108.134.256 instructions              #    0,21  insns per cycle          ( +-  0,00% )
-        37.427.143 cache-misses                                                  ( +-  0,12% )
-        23.891.685 branch-misses                                                 ( +-  0,05% )
-
-       1,555073057 seconds time elapsed                                          ( +-  0,08% )
-
-
-6. Copy struct in lookup instead of deref
-
-     5.247.906.481 cycles                    #    0,000 GHz                      ( +-  0,08% )
-     1.129.250.185 instructions              #    0,22  insns per cycle          ( +-  0,00% )
-        34.469.068 cache-misses                                                  ( +-  0,07% )
-        24.094.662 branch-misses                                                 ( +-  0,06% )
-
-       1,531305919 seconds time elapsed                                          ( +-  0,08% )
+6. Keine Pointer sondern eine Kopie des hashnode structs in lookup verwenden
+	- Einsparen von Pointerdereferenzierungen.
+	- Komischerweise sinken dadurch auch die Cache Misses
