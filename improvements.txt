@@ -95,3 +95,18 @@ Original:
         24.147.772 branch-misses                                                 ( +-  0,02% )
 
        1,557989971 seconds time elapsed                                          ( +-  0,08%
+
+
+4. Change modulo operation into bit-wise and.
+
+ Performance counter stats for './hash input input2' (20 runs):
+
+     5.326.874.164 cycles                    #    0,000 GHz                      ( +-  0,08% )
+     1.108.120.038 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        37.436.051 cache-misses                                                  ( +-  0,09% )
+        23.888.873 branch-misses                                                 ( +-  0,05% )
+
+       1,554599868 seconds time elapsed                                          ( +-  0,07% )
+
+GCC does this automatically:
+and    $0xfffff,%eax
