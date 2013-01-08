@@ -79,17 +79,20 @@ void insert(char *keyaddr, size_t keylen, int value)
     p->value = value;
     return;
   } else {
-    do {
-      i = (i + 1) % HASHSIZE;
-      p = &ht[i];
+    i = (i + 1) % HASHSIZE;
+    p = &ht[i];
 
+    while (p != l) {
       if (p->keyaddr == NULL) {
         p->keyaddr = keyaddr;
         p->keylen = keylen;
         p->value = value;
         return;
       }
-    } while (p != l);
+
+      i = (i + 1) % HASHSIZE;
+      p = &ht[i];
+    }
   }
 }
 
@@ -102,14 +105,17 @@ int lookup(char *keyaddr, size_t keylen)
   if (keylen == p->keylen && memcmp(keyaddr, p->keyaddr, keylen)==0) {
     return p->value;
   } else {
-    do {
-      i = (i + 1) % HASHSIZE;
-      p = &ht[i];
+    i = (i + 1) % HASHSIZE;
+    p = &ht[i];
 
+    while (p != l) {
       if (keylen == p->keylen && memcmp(keyaddr, p->keyaddr, keylen)==0) {
         return p->value;
       }
-    } while (p != l);
+
+      i = (i + 1) % HASHSIZE;
+      p = &ht[i];
+    }
   }
 
   return -1;

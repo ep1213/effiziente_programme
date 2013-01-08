@@ -53,21 +53,20 @@ Original:
 
  Performance counter stats for './hash input input2' (20 runs):
 
-     5.485.706.790 cycles                    #    0,000 GHz                      ( +-  0,07% )
-     1.114.249.242 instructions              #    0,20  insns per cycle          ( +-  0,00% )
-        35.131.869 cache-misses                                                  ( +-  0,07% )
-        24.218.972 branch-misses                                                 ( +-  0,03% )
+     5.326.434.201 cycles                    #    0,000 GHz                      ( +-  0,12% )
+     1.108.251.994 instructions              #    0,21  insns per cycle          ( +-  0,01% )
+        37.474.977 cache-misses                                                  ( +-  0,11% )
+        23.901.216 branch-misses                                                 ( +-  0,05% )
 
-       1,600369942 seconds time elapsed                                          ( +-  0,06% )
-
+       1,555794008 seconds time elapsed                                          ( +-  0,08% )
 
 4. Array indizes
 
  Performance counter stats for './hash input input2' (20 runs):
 
-     5.451.964.797 cycles                    #    0,000 GHz                      ( +-  0,73% )
-     1.097.290.401 instructions              #    0,20  insns per cycle          ( +-  0,00% )
-        36.504.227 cache-misses                                                  ( +-  0,14% )
-        24.074.482 branch-misses                                                 ( +-  0,04% )
+     5.450.613.711 cycles                    #    0,000 GHz                      ( +-  0,15% )
+     1.096.505.600 instructions              #    0,20  insns per cycle          ( +-  0,01% )
+        40.145.815 cache-misses                                                  ( +-  0,21% )
+        24.030.369 branch-misses                                                 ( +-  0,04% )
 
-       1,589130940 seconds time elapsed                                          ( +-  0,74% )
+       1,591981443 seconds time elapsed                                          ( +-  0,10% )
