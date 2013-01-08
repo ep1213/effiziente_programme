@@ -1,0 +1,82 @@
+Original:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     7.764.772.320 cycles                    #    0,000 GHz                      ( +-  0,08% )
+     1.231.082.381 instructions              #    0,16  insns per cycle          ( +-  0,01% )
+        35.950.427 cache-misses                                                  ( +-  0,01% )
+        19.665.360 branch-misses                                                 ( +-  0,06% )
+
+       2,265269786 seconds time elapsed                                          ( +-  0,05% )
+
+
+Improvement 1:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.526.148.581 cycles                    #    0,000 GHz                      ( +-  0,06% )
+     1.099.684.843 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        41.420.963 cache-misses                                                  ( +-  0,16% )
+        23.995.669 branch-misses                                                 ( +-  0,04% )
+
+       1,612996757 seconds time elapsed                                          ( +-  0,05% )
+
+
+Improvement 2:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.503.933.723 cycles                    #    0,000 GHz                      ( +-  0,07% )
+     1.099.691.128 instructions              #    0,20  insns per cycle          ( +-  0,00% )
+        40.751.907 cache-misses                                                  ( +-  0,19% )
+        23.993.804 branch-misses                                                 ( +-  0,03% )
+
+       1,606661405 seconds time elapsed                                          ( +-  0,06% )
+
+
+Improvement 3:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.347.231.294 cycles                    #    0,000 GHz                      ( +-  0,07% )
+     1.108.093.407 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        36.493.247 cache-misses                                                  ( +-  0,08% )
+        23.891.193 branch-misses                                                 ( +-  0,03% )
+
+       1,561660290 seconds time elapsed                                          ( +-  0,05% )
+
+
+Improvement 4:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.353.588.012 cycles                    #    0,000 GHz                      ( +-  0,08% )
+     1.108.126.801 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        36.487.175 cache-misses                                                  ( +-  0,08% )
+        23.898.188 branch-misses                                                 ( +-  0,03% )
+
+       1,562187326 seconds time elapsed                                          ( +-  0,05% )
+
+
+Improvement 5:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.345.568.094 cycles                    #    0,000 GHz                      ( +-  0,06% )
+     1.108.098.036 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        36.472.640 cache-misses                                                  ( +-  0,09% )
+        23.888.735 branch-misses                                                 ( +-  0,02% )
+
+       1,561970653 seconds time elapsed                                          ( +-  0,05% )
+
+
+Improvement 6:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5.280.911.634 cycles                    #    0,000 GHz                      ( +-  0,07% )
+     1.129.244.164 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        33.963.456 cache-misses                                                  ( +-  0,03% )
+        24.081.761 branch-misses                                                 ( +-  0,02% )
+
+       1,543456066 seconds time elapsed                                          ( +-  0,05% )
