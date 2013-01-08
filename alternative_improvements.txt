@@ -58,3 +58,13 @@ Less cycles but more instructions:
 983886270  instructions
  37226644  cache-misses
  15074776  branch-misses 
+
+
+Improvement 3_3 - Restructured if and do-while loops in lookup and insert to
+resemble "Unconditional Branch Removal"
+     5153165556  cycles                   #      0.000 M/sec   ( +-   0.065% )
+      982238279  instructions             #      0.191 IPC     ( +-   0.001% )
+       37199927  cache-misses             #      0.000 M/sec   ( +-   0.016% )
+       15086512  branch-misses            #      0.000 M/sec   ( +-   0.024% )
+
+    1.539403910  seconds time elapsed   ( +-   0.079% )
