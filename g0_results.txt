@@ -1,0 +1,87 @@
+Original:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     7277518340  cycles                   #      0.000 M/sec   ( +-   0.054% )
+     1063561684  instructions             #      0.146 IPC     ( +-   0.001% )
+       34979775  cache-misses             #      0.000 M/sec   ( +-   0.009% )
+       11401213  branch-misses            #      0.000 M/sec   ( +-   0.020% )
+
+    2.168108556  seconds time elapsed   ( +-   0.059% )
+
+
+Improvement1:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5201052613  cycles                   #      0.000 M/sec   ( +-   0.053% )
+     1013813863  instructions             #      0.195 IPC     ( +-   0.001% )
+       35234853  cache-misses             #      0.000 M/sec   ( +-   0.025% )
+       15148342  branch-misses            #      0.000 M/sec   ( +-   0.020% )
+
+    1.555136834  seconds time elapsed   ( +-   0.060% )
+
+
+
+Improvement2:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5200918523  cycles                   #      0.000 M/sec   ( +-   0.058% )
+     1013754197  instructions             #      0.195 IPC     ( +-   0.001% )
+       34315396  cache-misses             #      0.000 M/sec   ( +-   0.037% )
+       15208721  branch-misses            #      0.000 M/sec   ( +-   0.019% )
+
+    1.554178862  seconds time elapsed   ( +-   0.064% )
+
+
+
+Improvement3:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5171876294  cycles                   #      0.000 M/sec   ( +-   0.048% )
+      986902947  instructions             #      0.191 IPC     ( +-   0.001% )
+       34061412  cache-misses             #      0.000 M/sec   ( +-   0.029% )
+       15028358  branch-misses            #      0.000 M/sec   ( +-   0.024% )
+
+    1.544711720  seconds time elapsed   ( +-   0.067% )
+
+
+Improvement4:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5215228851  cycles                   #      0.000 M/sec   ( +-   0.056% )
+      957097888  instructions             #      0.184 IPC     ( +-   0.001% )
+       40850167  cache-misses             #      0.000 M/sec   ( +-   0.142% )
+       15440237  branch-misses            #      0.000 M/sec   ( +-   0.240% )
+
+    1.558329391  seconds time elapsed   ( +-   0.072% )
+
+
+
+Improvement5:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5214315506  cycles                   #      0.000 M/sec   ( +-   0.047% )
+      957197338  instructions             #      0.184 IPC     ( +-   0.002% )
+       40902533  cache-misses             #      0.000 M/sec   ( +-   0.116% )
+       15395151  branch-misses            #      0.000 M/sec   ( +-   0.220% )
+
+    1.558292765  seconds time elapsed   ( +-   0.058% )
+
+
+
+Improvement6:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     5155059146  cycles                   #      0.000 M/sec   ( +-   0.048% )
+     1001777703  instructions             #      0.194 IPC     ( +-   0.001% )
+       37627094  cache-misses             #      0.000 M/sec   ( +-   0.013% )
+       14998794  branch-misses            #      0.000 M/sec   ( +-   0.016% )
+
+    1.541116144  seconds time elapsed   ( +-   0.063% )
+
