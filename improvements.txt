@@ -110,3 +110,15 @@ Original:
 
 GCC does this automatically:
 and    $0xfffff,%eax
+
+
+5. Try to improve branch prediction
+
+ Performance counter stats for './hash input input2' (20 runs):
+
+     5.325.517.533 cycles                    #    0,000 GHz                      ( +-  0,10% )
+     1.108.134.256 instructions              #    0,21  insns per cycle          ( +-  0,00% )
+        37.427.143 cache-misses                                                  ( +-  0,12% )
+        23.891.685 branch-misses                                                 ( +-  0,05% )
+
+       1,555073057 seconds time elapsed                                          ( +-  0,08% )
