@@ -74,14 +74,11 @@ void insert(char *keyaddr, size_t keylen, int value)
   struct hashnode *p = &ht[i];
 
   if (p->keyaddr != NULL) {
-  
-    do {
-      
-      if (++i == HASHSIZE)
-      {
-         i = 0;
-      }
+    if (++i == HASHSIZE) {
+      i = 0;
+    }
 
+    while (i != start) {
       p = &ht[i];
 
       if (p->keyaddr == NULL) {
@@ -90,7 +87,11 @@ void insert(char *keyaddr, size_t keylen, int value)
         p->value = value;
         return;
       }
-    } while (i != start);
+
+      if (++i == HASHSIZE) {
+         i = 0;
+      }
+    }
 
     return;
   }
@@ -107,19 +108,21 @@ int lookup(char *keyaddr, size_t keylen)
   struct hashnode p = ht[i];
 
   if (keylen != p.keylen || memcmp(keyaddr, p.keyaddr, keylen)!=0) {
-    do {
-    
-      if (++i == HASHSIZE)
-      {
-         i = 0;
-      }
-      
+    if (++i == HASHSIZE) {
+      i = 0;
+    }
+
+    while (i != start) {
       p = ht[i];
 
       if (keylen == p.keylen && memcmp(keyaddr, p.keyaddr, keylen)==0) {
         return p.value;
       }
-    } while (i != start);
+
+      if (++i == HASHSIZE) {
+         i = 0;
+      }
+    }
 
     return -1;
   }
