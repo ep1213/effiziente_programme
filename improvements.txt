@@ -32,3 +32,8 @@
 6. Keine Pointer sondern eine Kopie des hashnode structs in lookup verwenden
 	- Einsparen von Pointerdereferenzierungen.
 	- Komischerweise sinken dadurch auch die Cache Misses
+
+7. Bulk Lookups
+	- Bisher jedes mal Cache Miss bei einem Lookup
+	- Lookups gruppieren und jeweilige Hashtable Einträge prefetchen
+	- dadurch beim Lookup nurnoch ein oder zwei Cache Misses pro Gruppe
