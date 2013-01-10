@@ -37,3 +37,7 @@
 	- Bisher jedes mal Cache Miss bei einem Lookup
 	- Lookups gruppieren und jeweilige Hashtable Einträge prefetchen
 	- dadurch beim Lookup nurnoch ein oder zwei Cache Misses pro Gruppe
+
+8. Bulk Lookups
+	- Weil es letztes Mal so toll funktioniert hat und hier ähnliche
+	  Probleme auftreten
