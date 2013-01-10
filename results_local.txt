@@ -116,3 +116,15 @@ Improvement 9:
         28.404.241 branch-misses                                                 ( +-  0,02% )
 
        0,953237147 seconds time elapsed                                          ( +-  0,04% )
+
+
+Improvement 10:
+
+ Performance counter stats for './hash input input2' (40 runs):
+
+     3.165.997.287 cycles                    #    0,000 GHz                      ( +-  0,10% )
+     1.307.388.825 instructions              #    0,41  insns per cycle          ( +-  0,00% )
+        30.506.357 cache-misses                                                  ( +-  0,03% )
+        28.767.566 branch-misses                                                 ( +-  0,03% )
+
+       0,932935829 seconds time elapsed                                          ( +-  0,07% )

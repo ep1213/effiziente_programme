@@ -44,3 +44,6 @@
 
 9. Gleiches struct für return werte des bulk lookups verwenden.
 	- Muss nicht auf neues array zugreifen -> weniger cache misses
+
+10. Berechneten hash bei lookup in request struct speichern.
+	- Weniger offset Berechnungen
