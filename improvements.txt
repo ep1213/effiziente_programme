@@ -51,3 +51,7 @@
 
 10. Berechneten Hash bei Lookup in Request struct speichern.
 	- Weniger offset Berechnungen
+
+
+11. In IF Abfragen in Hauptschleifen mit GOTO beenden
+	- Verhindert erneute Prüfung der Abbruchbedingung der äußeren Schleife
