@@ -33,17 +33,21 @@
 	- Einsparen von Pointerdereferenzierungen.
 	- Komischerweise sinken dadurch auch die Cache Misses
 
+
 7. Bulk Lookups
 	- Bisher jedes mal Cache Miss bei einem Lookup
 	- Lookups gruppieren und jeweilige Hashtable Einträge prefetchen
 	- dadurch beim Lookup nurnoch ein oder zwei Cache Misses pro Gruppe
 
+
 8. Bulk Lookups
 	- Weil es letztes Mal so toll funktioniert hat und hier ähnliche
 	  Probleme auftreten.
 
+
 9. Gleiches struct für return werte des bulk lookups verwenden.
 	- Muss nicht auf neues array zugreifen -> weniger cache misses
 
-10. Berechneten hash bei lookup in request struct speichern.
+
+10. Berechneten Hash bei Lookup in Request struct speichern.
 	- Weniger offset Berechnungen
